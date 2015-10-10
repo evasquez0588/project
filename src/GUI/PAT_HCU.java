@@ -1,4 +1,4 @@
-package phase1;
+package GUI;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
