@@ -6,7 +6,7 @@ import javax.swing.JLabel;
 public class PAT_ScAp extends JPanel {
 
 	/**
-	 * PATIENT SCHEDULE APPOINTMENT JPANEL
+	 * This is a standin for the Patient Schedule Appointment JPanel
 	 */
 	public PAT_ScAp() {
 		setLayout(null);
