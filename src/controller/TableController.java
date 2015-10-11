@@ -22,7 +22,7 @@ public class TableController implements DBQuery{
 			throw new SQLException("cannot connect database");
 		}
 		String sql;
-		sql = "select * from tableName where 1";
+		sql = "select * from Syndromes";
 		PreparedStatement statement = connection.prepareStatement(sql);
 		ResultSet resultset = statement.executeQuery();
 		while(resultset.next()) {
