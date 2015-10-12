@@ -186,6 +186,7 @@ public class ApplicationGUI extends JFrame {
 				}
 				else
 					info[3]="female";
+				pat.setPI(info);
 			}
 		}
 	}
