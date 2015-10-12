@@ -1,8 +1,7 @@
-package model;
+package phase1;
+
+
 import java.util.ArrayList;
-
-import GUI.Controller;
-
 /********************************************************************************
 CSE 360 IPIMS Project
 File Name: Patient.java
@@ -21,6 +20,7 @@ public class Patient
   private String address;
   private String healthCondition;
   private String healthRecord;
+  private char sex;
   
   public Patient(Controller window)
   {
@@ -30,9 +30,10 @@ public class Patient
 	  /* ADD GUI FIELD FOR PHONE # */
 	  this.healthRecord = window.storeConcerns;
   }
+  
   //don't worry about this
-  public Patient(){
-  	
+  public Patient(boolean a){
+	  
   }
   
   // Should this method return the details as an ArrayList?
@@ -59,6 +60,13 @@ public class Patient
     this.address = address;
     this.healthCondition = healthCondition;
     this.healthRecord = healthRecord;
+  }
+  
+  public void setPI(String[] a){
+	  this.name = a[0];
+	  this.age  = a[1];
+	  this.ssn = a[2];
+	  this.sex = a[3].charAt(0);
   }
   
   /*getAppointment (patientId, date, doctorId)  {
