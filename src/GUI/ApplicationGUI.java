@@ -34,7 +34,6 @@ import controller.TableController;
  *THE HEALTHCARE CONDITION UPDATE AND SCHEDULE APPOINTMENT PANELS ARE NOT DONE AS THEY WERE NOT LABELED IN THE SDD
  *I HAVE NO CLUE HOW THOSE TWO WOULD WORK ANYWAYS DATAWISE SO CANT REALLY DESIGN THEM
  *IF YOU GIVE ME A PICTURE OUR DESCRIBE IT TO ME I CAN HAVE IT DONE BY 1AM 10/10/2015
-
  *
  
  *EXPECT SOME CHANGES TO THIS LAYOUT
@@ -81,7 +80,6 @@ public class ApplicationGUI extends JFrame {
 		//pat_SeAl = new PAT_SeAl();
 		pat_ScAp = new PAT_ScAp(500,500);
 		pat_HCU = new PAT_HCU();
-
 
 		RegistrationBase = new TestPatient_Registration1(e, b);
 		reg_PI = new Reg_PI(b);
