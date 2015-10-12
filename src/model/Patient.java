@@ -21,6 +21,8 @@ public class Patient
   private String healthCondition;
   private String healthRecord;
   private char sex;
+  private String InsuranceComp;
+  private String InsuranceID;
   
   public Patient(Controller window)
   {
@@ -61,12 +63,17 @@ public class Patient
     this.healthCondition = healthCondition;
     this.healthRecord = healthRecord;
   }
-  
+  //set patient info screen
   public void setPI(String[] a){
 	  this.name = a[0];
 	  this.age  = a[1];
 	  this.ssn = a[2];
 	  this.sex = a[3].charAt(0);
+  }
+  //set patient insurance information screen
+  public void setII(String[] a){
+	  this.InsuranceComp = a[0];
+	  this.InsuranceID = a[2];
   }
   
   /*getAppointment (patientId, date, doctorId)  {
