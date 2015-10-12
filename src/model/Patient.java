@@ -1,6 +1,8 @@
 package model;
 import java.util.ArrayList;
 
+import GUI.Controller;
+
 /********************************************************************************
 CSE 360 IPIMS Project
 File Name: Patient.java
@@ -10,37 +12,56 @@ Description: This class contains the functions assigned to the Patient object.
 
 public class Patient
 {
-  // Instance variables
-  public int patientId;
+  public String patientId;
   public String firstName;
   public String lastName;
-  public int age;
-  public int ssn;
-  public int contactNumber;
+  public String age;
+  public String ssn;
+  public String contactNumber;
   public String address;
   public String history;
   public String allergies;
   public String birthdate;
   public String sex;
-  public ArrayList<String> healthCondition;
-  public ArrayList<String> healthRecord;
+  public String healthCondition;
+  public String healthRecord;
   
-  // Should this method returnt the details as an ArrayList?
-  /* getPatientDetails()  {
-  return patientId    
-  return name
-  return age
-  return ssn
-  return contactNumber
-  return address
-  return healthCondition
-  return healthRecord
-  } */
+  public Patient(Controller window)
+  {
+	  this.firstName = window.storeName;
+	  this.address = window.storeAddress;
+	  this.ssn = window.storeSsn;
+	  /* ADD GUI FIELD FOR PHONE # */
+	  this.healthRecord = window.storeConcerns;
+  }
+  //don't worry about this
+  public Patient(){
+  	
+  }
   
+  // Should this method return the details as an ArrayList?
+  public ArrayList<String> getPatientDetails()  {
+	  ArrayList<String> summary = new ArrayList<String>();
+	  summary.add(patientId);    
+	  summary.add(firstName);
+	  summary.add(lastName);
+	  summary.add(age);
+	  summary.add(ssn);
+	  summary.add(contactNumber);
+	  summary.add(address);
+	  summary.add(healthCondition);
+	  summary.add(healthRecord);
+	  return summary;
+  }
+ 
   /*
   public void setPatientDetails(int patientId, String name, int age, int ssn, int contactNumber, 
     String address, ArrayList<String> healthCondition, ArrayList<String> healthRecord) {
 	return;
+=======
+  public void setPatientDetails(String patientId, String name, String age, String ssn, String contactNumber, 
+    String address, String healthCondition, String healthRecord) {
+>>>>>>> origin/rlnsanz_branch
     this.patientId = patientId;  
     this.name = name;
     this.age = age;

@@ -12,8 +12,7 @@ public class Controller extends JPanel implements ActionListener{
 	private JTextArea healthConcerns;
 	private JComboBox doctorDrop, healthRankDrop;
 	private JButton apply; 
-	String storeName, storeAddress, storeSsn,storeDoctor, storeHealthRank,storeConcerns, storeDate;
-	
+	public String storeName, storeAddress, storeSsn,storeDoctor, storeHealthRank,storeConcerns, storeDate;
 	
 
 
