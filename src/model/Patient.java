@@ -11,14 +11,19 @@ Description: This class contains the functions assigned to the Patient object.
 public class Patient
 {
   // Instance variables
-  private int patientId;
-  private String name;
-  private int age;
-  private int ssn;
-  private int contactNumber;
-  private String address;
-  private ArrayList<String> healthCondition;
-  private ArrayList<String> healthRecord;
+  public int patientId;
+  public String firstName;
+  public String lastName;
+  public int age;
+  public int ssn;
+  public int contactNumber;
+  public String address;
+  public String history;
+  public String allergies;
+  public String birthdate;
+  public String sex;
+  public ArrayList<String> healthCondition;
+  public ArrayList<String> healthRecord;
   
   // Should this method returnt the details as an ArrayList?
   /* getPatientDetails()  {
@@ -32,8 +37,10 @@ public class Patient
   return healthRecord
   } */
   
+  /*
   public void setPatientDetails(int patientId, String name, int age, int ssn, int contactNumber, 
     String address, ArrayList<String> healthCondition, ArrayList<String> healthRecord) {
+	return;
     this.patientId = patientId;  
     this.name = name;
     this.age = age;

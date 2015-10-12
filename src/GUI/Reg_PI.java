@@ -82,8 +82,6 @@ public class Reg_PI extends JPanel {
 		rdbtnFemale.setBounds(188, 135, 70, 23);
 		add(rdbtnFemale);
 		
-	
-		
 		
 	}
 }
