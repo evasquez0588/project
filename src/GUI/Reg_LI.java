@@ -1,19 +1,23 @@
 package GUI;
 
+
+import java.awt.event.ActionListener;
+
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 
 public class Reg_LI extends JPanel {
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
+	public JTextField textField;
+	public JTextField textField_1;
+	public JTextField textField_2;
+	public JButton save;
 
 	/**
-	 * Registration Login Information panel.
+	 * Create the panel.
 	 */
-	public Reg_LI() {
+	public Reg_LI(ActionListener b) {
 		setLayout(null);
 		setSize(343,210);
 		
@@ -48,9 +52,10 @@ public class Reg_LI extends JPanel {
 		textField_2.setBounds(136, 134, 144, 20);
 		add(textField_2);
 		
-		JButton btnNewButton = new JButton("Save");
-		btnNewButton.setBounds(112, 176, 89, 23);
-		add(btnNewButton);
+		save = new JButton("Save");
+		save.setBounds(112, 176, 89, 23);
+		save.addActionListener(b);
+		add(save);
 	}
 
 }

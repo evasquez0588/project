@@ -1,22 +1,26 @@
 package GUI;
 
+import java.awt.event.ActionListener;
+
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JMenu;
 import javax.swing.JRadioButtonMenuItem;
+import javax.swing.JButton;
 
 public class Reg_CI extends JPanel {
-	private JTextField textField_0;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
+	public JTextField textField_0;
+	public JTextField textField;
+	public JTextField textField_1;
+	public JTextField textField_2;
+	public JTextField textField_3;
+	public JButton btnSave;
 
 	/**
-	 * Registration Contact Information panel.
+	 * Create the panel.
 	 */
-	public Reg_CI() {
+	public Reg_CI(ActionListener b) {
 		setLayout(null);
 		setSize(343,210);
 		
@@ -72,5 +76,12 @@ public class Reg_CI extends JPanel {
 		textField_3.setColumns(10);
 		textField_3.setBounds(212, 156, 74, 20);
 		add(textField_3);
+		
+		JButton btnSave = new JButton("Save");
+		btnSave.setBounds(114, 187, 89, 23);
+		btnSave.addActionListener(b);
+		add(btnSave);
+		
+
 	}
 }
