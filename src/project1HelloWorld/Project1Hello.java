@@ -14,15 +14,22 @@ public class Project1Hello {
 			TableController table = new TableController();
 			ArrayList<ArrayList<String>> result = null;
 			Patient sample = new Patient();
+			sample.firstName = "Hedwig";
+			sample.lastName = "Owl";
+			sample.birthdate = "04/18/1992";
+			sample.sex = "M";
+			sample.ssn = "223123333";
 			try {
-				result = table.get();
+				result = table.registerPatient(sample);
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			/*
 			for (String field : result.get(0)) {
 				System.out.println(field);
 			}
+			*/
 	}
 
 }

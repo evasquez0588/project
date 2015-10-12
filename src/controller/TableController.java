@@ -16,8 +16,6 @@ public class TableController implements DBQuery{
 	 * @throws SQLException
 	 */
 	
-	private static int GKey;
-	
 	public ArrayList<ArrayList<String>> get() throws SQLException {
 		
 		ArrayList<ArrayList<String>> result = new ArrayList<>();
@@ -131,11 +129,11 @@ public ArrayList<ArrayList<String>> registerPatient(Patient p) throws SQLExcepti
 	
 	sql = "INSERT INTO `GlobalKey`(`Gkey`) VALUES (" + Gkey + ")";
 	statement = connection.prepareStatement(sql);
-	statement.executeQuery();
+	statement.executeUpdate();
 	
-	sql = "UPDATE `Patient` SET `DateOfBirth`="+p.birthdate+",`FirstName`="+p.firstName+",`Gkey`="+Gkey+",`LastName`="+p.lastName+",`Sex`="+p.sex+",`SSN`="+p.ssn+",`Username`=temp"+Gkey;
+	sql = "INSERT INTO `Patient`(`DateOfBirth`, `FirstName`, `Gkey`, `LastName`, `Sex`, `SSN`, `Username`) VALUES ('"+p.birthdate+"','"+p.firstName+"',"+Gkey+",'"+p.lastName+"','"+p.sex+"','"+p.ssn+"','"+"temp"+Gkey+"')";
 	statement = connection.prepareStatement(sql);
-	statement.executeQuery();
+	statement.executeUpdate();
 	
 	resultset.close();
 	statement.close();
