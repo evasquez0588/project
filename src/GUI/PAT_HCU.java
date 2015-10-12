@@ -16,7 +16,7 @@ public class PAT_HCU extends JPanel {
 	/**
 	 * Create the panel.
 	 */
-	public PAT_HCU() {
+	public PAT_HCU(ActionListener b) {
 		setLayout(null);
 		setSize(680,653);
 		
