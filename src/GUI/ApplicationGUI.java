@@ -72,7 +72,7 @@ public class ApplicationGUI extends JFrame {
 
 		//pat_SeAl = new PAT_SeAl();
 		pat_ScAp = new PAT_ScAp();
-		pat_HCU = new PAT_HCU();
+		pat_HCU = new PAT_HCU(b);
 
 		RegistrationBase = new TestPatient_Registration1(e, b);
 		reg_PI = new Reg_PI(b);
