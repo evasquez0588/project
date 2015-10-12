@@ -9,6 +9,7 @@ public class PAT_HCU extends JPanel {
 	 * This is a stand in panel for the patient health care update JPanel
 	 */
 	public PAT_HCU() {
+		
 		setLayout(null);
 		setSize(343,210);
 		

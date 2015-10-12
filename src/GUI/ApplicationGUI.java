@@ -46,7 +46,7 @@ public class ApplicationGUI extends JFrame {
 	//patient schedule appt
 	PAT_ScAp pat_ScAp;
 	//patient update health condition
-	PAT_HCU pat_HCU;
+	Controller pat_HCU;
 
 	TestPatient_Registration1 RegistrationBase;
 
@@ -72,7 +72,7 @@ public class ApplicationGUI extends JFrame {
 
 		//pat_SeAl = new PAT_SeAl();
 		pat_ScAp = new PAT_ScAp();
-		pat_HCU = new PAT_HCU();
+		pat_HCU = new Controller(1000, 1000);
 
 		RegistrationBase = new TestPatient_Registration1(e, b);
 		reg_PI = new Reg_PI(b);
