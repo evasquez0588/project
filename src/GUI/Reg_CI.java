@@ -7,6 +7,7 @@ import javax.swing.JMenu;
 import javax.swing.JRadioButtonMenuItem;
 
 public class Reg_CI extends JPanel {
+	private JTextField textField_0;
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
@@ -46,6 +47,11 @@ public class Reg_CI extends JPanel {
 		JLabel lblZipCode = new JLabel("ZIP Code:");
 		lblZipCode.setBounds(10, 159, 74, 14);
 		add(lblZipCode);
+		
+		textField_0 = new JTextField();
+		textField_0.setBounds(212, 36, 74, 20);
+		add(textField_0);
+		textField_0.setColumns(10);
 		
 		textField = new JTextField();
 		textField.setBounds(247, 82, 39, 20);
