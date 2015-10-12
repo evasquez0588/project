@@ -13,11 +13,11 @@ Description: This class contains the functions assigned to the Patient object.
 public class Patient
 {
   // Instance variables
-  private int patientId;
+  private String patientId;
   private String name;
-  private int age;
-  private int ssn;
-  private int contactNumber;
+  private String age;
+  private String ssn;
+  private String contactNumber;
   private String address;
   private String healthCondition;
   private String healthRecord;
@@ -26,24 +26,26 @@ public class Patient
   {
 	  this.name = window.storeName;
 	  this.address = window.storeAddress;
-	  this.ssn = Integer.getInteger(window.storeSsn);
+	  this.ssn = window.storeSsn;
 	  /* ADD GUI FIELD FOR PHONE # */
 	  this.healthRecord = window.storeConcerns;
   }
   
   // Should this method return the details as an ArrayList?
-  /* getPatientDetails()  {
-  return patientId    
-  return name
-  return age
-  return ssn
-  return contactNumber
-  return address
-  return healthCondition
-  return healthRecord
-  } */
+  public ArrayList<String> getPatientDetails()  {
+	  ArrayList<String> summary = new ArrayList<String>();
+	  summary.add(patientId);    
+	  summary.add(name);
+	  summary.add(age);
+	  summary.add(ssn);
+	  summary.add(contactNumber);
+	  summary.add(address);
+	  summary.add(healthCondition);
+	  summary.add(healthRecord);
+	  return summary;
+  }
   
-  public void setPatientDetails(int patientId, String name, int age, int ssn, int contactNumber, 
+  public void setPatientDetails(String patientId, String name, String age, String ssn, String contactNumber, 
     String address, String healthCondition, String healthRecord) {
     this.patientId = patientId;  
     this.name = name;
