@@ -3,7 +3,7 @@ package GUI;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 
-pimport java.awt.GridLayout;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
