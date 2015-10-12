@@ -101,5 +101,6 @@ public class PAT_HCU extends JPanel {
 		JButton btnNewButton = new JButton("Update");
 		btnNewButton.setBounds(545, 559, 89, 23);
 		add(btnNewButton);
+		btwNewButton.addActionListener(b);
 	}
 }
