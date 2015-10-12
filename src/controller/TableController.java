@@ -46,7 +46,7 @@ public class TableController implements DBQuery{
 		return result;
 	}
 	
-public ArrayList<ArrayList<String>> updateHealthConditions(Patient p) throws SQLException {
+public ArrayList<ArrayList<String>> searchUpdateHealthConditions(Patient p) throws SQLException {
 		
 		ArrayList<ArrayList<String>> result = new ArrayList<>();
 		Connection connection = this.connectDatabase();
@@ -95,6 +95,8 @@ public ArrayList<ArrayList<String>> updateHealthConditions(Patient p) throws SQL
 		connection.close();
 		return result;
 	}
+
+
 
 public ArrayList<ArrayList<String>> registerPatient(Patient p) throws SQLException {
 	

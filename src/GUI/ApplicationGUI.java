@@ -1,3 +1,4 @@
+package GUI;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -8,6 +9,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
+
+import model.Patient;
 
 /**
  *THIS IS THE FIRST MAJOR PANEL

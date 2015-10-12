@@ -10,7 +10,6 @@ File Name: Patient.java
 Group: 2
 Description: This class contains the functions assigned to the Patient object.
 *********************************************************************************/
-
 public class Patient
 {
   public String patientId;
@@ -25,7 +24,6 @@ public class Patient
   public String birthdate;
   public String sex;
   public String healthCondition;
-  public String healthRecord;
   
   public Patient(Controller window)
   {
@@ -33,7 +31,7 @@ public class Patient
 	  this.address = window.storeAddress;
 	  this.ssn = window.storeSsn;
 	  /* ADD GUI FIELD FOR PHONE # */
-	  this.healthRecord = window.storeConcerns;
+	  this.healthCondition = window.storeConcerns;
   }
   
   //don't worry about this
@@ -52,7 +50,7 @@ public class Patient
 	  summary.add(contactNumber);
 	  summary.add(address);
 	  summary.add(healthCondition);
-	  summary.add(healthRecord);
+	  summary.add(healthCondition);
 	  return summary;
   }
  
@@ -73,12 +71,17 @@ public class Patient
     this.healthCondition = healthCondition;
     this.healthRecord = healthRecord;
   }
-  
+  //set patient info screen
   public void setPI(String[] a){
 	  this.name = a[0];
 	  this.age  = a[1];
 	  this.ssn = a[2];
 	  this.sex = a[3].charAt(0);
+  }
+  //set patient insurance information screen
+  public void setII(String[] a){
+	  this.InsuranceComp = a[0];
+	  this.InsuranceID = a[2];
   }
   
   /*getAppointment (patientId, date, doctorId)  {
