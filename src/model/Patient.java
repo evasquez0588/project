@@ -30,6 +30,10 @@ public class Patient
 	  /* ADD GUI FIELD FOR PHONE # */
 	  this.healthRecord = window.storeConcerns;
   }
+  //don't worry about this
+  public Patient(){
+  	
+  }
   
   // Should this method return the details as an ArrayList?
   public ArrayList<String> getPatientDetails()  {
