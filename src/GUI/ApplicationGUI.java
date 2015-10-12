@@ -84,7 +84,7 @@ public class ApplicationGUI extends JFrame {
 		reg_II = new Reg_II(b);
 		reg_LI = new Reg_LI();
 		reg_CI = new Reg_CI();
-		reg_MH = new Reg_MH();
+		reg_MH = new Reg_MH(b);
 
 		contentPane = new JPanel();
 		//contentPane.setLayout(null);
