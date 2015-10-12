@@ -4,6 +4,8 @@ import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -11,6 +13,7 @@ import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 
 import model.Patient;
+import controller.TableController;
 
 /**
  *THIS IS THE FIRST MAJOR PANEL
@@ -175,21 +178,27 @@ public class ApplicationGUI extends JFrame {
 				//INSERT CODE HERE
 			}
 			if (event.getSource() == reg_PI.save){
+				Patient some = new Patient();
 				String[] info = new String[4];
-				//name
-				info[0] = reg_PI.textField.getText();
-				info[0]+= " "+ reg_PI.textField_1.getText();
-				//bday
-				info[1] = reg_PI.textField_2.getText();
-				//ssn
-				info[2] = reg_PI.textField_3.getText();
+				some.ssn = reg_PI.textField.getText();
+				some.birthdate = reg_PI.textField_1.getText();
+				some.lastName = reg_PI.textField_2.getText();
+				some.firstName = reg_PI.textField_3.getText();
 				//sex
+				/*
 				if(reg_PI.check1.isSelected()){
-					info[3]="male";
+					some.sex="M";
 				}
 				else
-					info[3]="female";
-				pat.setPI(info);
+					some.sex="F";
+					*/
+				some.sex = "M";
+				try {
+					ArrayList<ArrayList<String>> result = (new TableController()).registerPatient(some);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 			if (event.getSource() == reg_II.btnSave){
 				String[] info = new String[3];
