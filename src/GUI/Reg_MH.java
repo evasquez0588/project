@@ -1,5 +1,8 @@
 package GUI;
 
+
+import java.awt.event.ActionListener;
+
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JButton;
@@ -8,12 +11,13 @@ import javax.swing.JTextPane;
 import javax.swing.JTextArea;
 
 public class Reg_MH extends JPanel {
-	private JTextField textField;
-
+	public JTextField allergies;
+	public JTextArea medHis;
+	public JButton save;
 	/**
-	 * Registration Medical History panel.
+	 * Create the panel.
 	 */
-	public Reg_MH() {
+	public Reg_MH(ActionListener b) {
 		setLayout(null);
 		setSize(343,210);
 		
@@ -29,17 +33,17 @@ public class Reg_MH extends JPanel {
 		lblPastMedicalHistory.setBounds(10, 108, 130, 38);
 		add(lblPastMedicalHistory);
 		
-		JButton btnNewButton = new JButton("Save");
-		btnNewButton.setBounds(125, 176, 89, 23);
-		add(btnNewButton);
+		save = new JButton("Save");
+		save.setBounds(125, 176, 89, 23);
+		add(save);
 		
-		textField = new JTextField();
-		textField.setBounds(172, 36, 130, 20);
-		add(textField);
-		textField.setColumns(10);
+		allergies = new JTextField();
+		allergies.setBounds(172, 36, 130, 20);
+		add(allergies);
+		allergies.setColumns(10);
 		
-		JTextArea textArea = new JTextArea();
-		textArea.setBounds(172, 84, 130, 81);
-		add(textArea);
+		medHis = new JTextArea();
+		medHis.setBounds(172, 84, 130, 81);
+		add(medHis);
 	}
 }
