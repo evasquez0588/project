@@ -102,5 +102,10 @@ public class PAT_HCU extends JPanel {
 		btnNewButton.setBounds(545, 559, 89, 23);
 		add(btnNewButton);
 		btwNewButton.addActionListener(b);
+		
+		JButton btnNewButton_1 = new JButton("SEND HEALTH ALERT FOR XYZ");
+		btnNewButton_1.setBounds(348, 56, 209, 85);
+		add(btnNewButton_1);
+		btwNewButton_1.addActionListener(b);
 	}
 }
