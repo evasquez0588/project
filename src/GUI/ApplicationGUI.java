@@ -1,4 +1,3 @@
-package GUI;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -44,12 +43,14 @@ public class ApplicationGUI extends JFrame {
 	//JPanel RegistrationBase, reg_II, reg_CI, reg_MH, reg_LI;
 	TestP1 start;
 	//patient schedule appt
-	Controller pat_ScAp;
+	PAT_ScAp pat_ScAp;
 	//patient update health condition
 	PAT_HCU pat_HCU;
+	Patient pat;
 
 	TestPatient_Registration1 RegistrationBase;
-
+	
+	//Controller test_app;
 	Reg_PI reg_PI;
 	Reg_II reg_II;
 	Reg_CI reg_CI;
@@ -69,9 +70,10 @@ public class ApplicationGUI extends JFrame {
 		Bridge b = new Bridge();
 
 		start = new TestP1(e);
-
+		
+		//test_app = new Controller(500,500);
 		//pat_SeAl = new PAT_SeAl();
-		pat_ScAp = new Controller(1000, 1000);
+		pat_ScAp = new PAT_ScAp(500,500);
 		pat_HCU = new PAT_HCU();
 
 		RegistrationBase = new TestPatient_Registration1(e, b);
@@ -111,6 +113,7 @@ public class ApplicationGUI extends JFrame {
 			//---
 			if(event.getSource() == start.b1){
 				updateStart(RegistrationBase);
+				pat = new Patient(true);
 			}
 			if(event.getSource() == start.b2){
 				updateStart(pat_ScAp);
@@ -154,14 +157,35 @@ public class ApplicationGUI extends JFrame {
 
 
 	}
-
+	/*
+	 * Reg_PI reg_PI;
+	Reg_II reg_II;
+	Reg_CI reg_CI;
+	Reg_MH reg_MH;
+	Reg_LI reg_LI;
+	 * 
+	 */
 	//INSERT METHODS HERE
 	public class Bridge implements ActionListener{
 		public void actionPerformed (ActionEvent event){
-
 			if (event.getSource() == RegistrationBase.b6){
 				//INSERT CODE HERE
-
+			}
+			if (event.getSource() == reg_PI.save){
+				String[] info = new String[10];
+				//name
+				info[0] = reg_PI.textField.getText();
+				info[0]+= " "+ reg_PI.textField_1.getText();
+				//bday
+				info[1] = reg_PI.textField_2.getText();
+				//ssn
+				info[2] = reg_PI.textField_3.getText();
+				//sex
+				if(reg_PI.check1.isSelected()){
+					info[3]="male";
+				}
+				else
+					info[3]="female";
 			}
 		}
 	}
