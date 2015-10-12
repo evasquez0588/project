@@ -24,6 +24,9 @@ public class Patient
   public String birthdate;
   public String sex;
   public String healthCondition;
+  public String InsuranceComp;
+  public String InsuranceID;
+  public String allergies;
   
   public Patient() {}
   
@@ -55,6 +58,25 @@ public class Patient
 	  summary.add(healthCondition);
 	  return summary;
   }
+  
+    //set patient info screen
+  public void setPI(String[] a){
+	  this.name = a[0];
+	  this.age  = a[1];
+	  this.ssn = a[2];
+	  this.sex = a[3].charAt(0);
+  }
+  //set patient insurance information screen
+  public void setII(String[] a){
+	  this.InsuranceComp = a[0];
+	  this.InsuranceID = a[2];
+  }
+  
+  //set patient medical history screen
+  public void setMH(String[] a){
+	  this.allergies = a[0];
+	  this.healthRecord = a[1];
+  }
  
   /*
   public void setPatientDetails(int patientId, String name, int age, int ssn, int contactNumber, 
@@ -73,18 +95,7 @@ public class Patient
     this.healthCondition = healthCondition;
     this.healthRecord = healthRecord;
   }
-  //set patient info screen
-  public void setPI(String[] a){
-	  this.name = a[0];
-	  this.age  = a[1];
-	  this.ssn = a[2];
-	  this.sex = a[3].charAt(0);
-  }
-  //set patient insurance information screen
-  public void setII(String[] a){
-	  this.InsuranceComp = a[0];
-	  this.InsuranceID = a[2];
-  }
+
   
   /*getAppointment (patientId, date, doctorId)  {
   return patientId
