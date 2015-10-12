@@ -25,6 +25,8 @@ public class Patient
   public String sex;
   public String healthCondition;
   
+  public Patient() {}
+  
   public Patient(Controller window)
   {
 	  this.firstName = window.storeName;

@@ -4,7 +4,7 @@ import controller.TableController;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-
+import model.Patient;
 
 public class Project1Hello {
 
@@ -13,6 +13,7 @@ public class Project1Hello {
 			System.out.println("Hello world");
 			TableController table = new TableController();
 			ArrayList<ArrayList<String>> result = null;
+			Patient sample = new Patient();
 			try {
 				result = table.get();
 			} catch (SQLException e) {
