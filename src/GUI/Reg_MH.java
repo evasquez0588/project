@@ -11,6 +11,7 @@ import javax.swing.JTextPane;
 import javax.swing.JTextArea;
 
 public class Reg_MH extends JPanel {
+	//globals
 	public JTextField allergies;
 	public JTextArea medHis;
 	public JButton save;
