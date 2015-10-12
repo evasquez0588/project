@@ -8,13 +8,13 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JRadioButton;
-//registration Personal Information JPanel
+
 public class Reg_PI extends JPanel {
 	public JTextField textField;
 	public JTextField textField_1;
 	public JTextField textField_2;
 	public JTextField textField_3;
-	public JCheckBox check1, check2;
+	public JRadioButton check1, check2;
 	public JButton save;
 
 	/**
@@ -74,13 +74,13 @@ public class Reg_PI extends JPanel {
 		save.addActionListener(b);
 		add(save);
 		
-		JRadioButton rdbtnMale = new JRadioButton("Male");
-		rdbtnMale.setBounds(100, 135, 70, 23);
-		add(rdbtnMale);
+		JRadioButton check1 = new JRadioButton("Male");
+		check1.setBounds(100, 135, 70, 23);
+		add(check1);
 		
-		JRadioButton rdbtnFemale = new JRadioButton("Female");
-		rdbtnFemale.setBounds(188, 135, 70, 23);
-		add(rdbtnFemale);
+		JRadioButton check2 = new JRadioButton("Female");
+		check2.setBounds(188, 135, 70, 23);
+		add(check2);
 		
 		
 	}

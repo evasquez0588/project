@@ -6,11 +6,12 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
-//Registration Insurance Information JPanel
+
 public class Reg_II extends JPanel {
 	public JTextField t1;
-	private JTextField t2;
-	private JTextField t3;
+	public JTextField t2;
+	public JTextField t3;
+	public JButton btnSave;
 
 	/**
 	 * Create the panel.
@@ -50,7 +51,7 @@ public class Reg_II extends JPanel {
 		t3.setBounds(180, 129, 112, 20);
 		add(t3);
 		
-		JButton btnSave = new JButton("Save");
+		btnSave = new JButton("Save");
 		btnSave.setBounds(123, 184, 89, 23);
 		btnSave.addActionListener(b);
 		add(btnSave);
