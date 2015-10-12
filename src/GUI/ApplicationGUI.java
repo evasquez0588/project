@@ -84,7 +84,7 @@ public class ApplicationGUI extends JFrame {
 		reg_II = new Reg_II(b);
 		reg_LI = new Reg_LI();
 		reg_CI = new Reg_CI();
-		reg_MH = new Reg_MH();
+		reg_MH = new Reg_MH(b);
 
 		contentPane = new JPanel();
 		//contentPane.setLayout(null);
@@ -175,7 +175,7 @@ public class ApplicationGUI extends JFrame {
 				//INSERT CODE HERE
 			}
 			if (event.getSource() == reg_PI.save){
-				String[] info = new String[10];
+				String[] info = new String[4];
 				//name
 				info[0] = reg_PI.textField.getText();
 				info[0]+= " "+ reg_PI.textField_1.getText();
@@ -190,6 +190,22 @@ public class ApplicationGUI extends JFrame {
 				else
 					info[3]="female";
 				pat.setPI(info);
+			}
+			if (event.getSource() == reg_II.btnSave){
+				String[] info = new String[3];
+				//Insurance Name
+				info[0] = reg_II.t1.getText();
+				//Member Name
+				info[1] = reg_II.t2.getText();
+				//Insurance ID
+				info[2] = reg_II.t3.getText();
+				pat.setII(info);
+			}
+			if (event.getSource() == reg_MH.save){
+				String[] info = new String[2];
+				info[0] = reg_MH.allergies.getText();
+				info[1] = reg_MH.medHis.getText();
+				pat.setMH(info);
 			}
 		}
 	}
