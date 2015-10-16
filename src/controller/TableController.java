@@ -15,7 +15,15 @@ public class TableController implements DBQuery{
 	 * @return a table
 	 * @throws SQLException
 	 */
-	
+	public Connection connectDatabase() {
+		Connection connection = null;
+		try {
+			connection = MySQLConnector.connectDatabase("primafacie.cidse.dhcp.asu.edu", "IPIMS", "dbuser", "temp4now");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return connection;
+	}
 	public ArrayList<ArrayList<String>> get() throws SQLException {
 		
 		ArrayList<ArrayList<String>> result = new ArrayList<>();
