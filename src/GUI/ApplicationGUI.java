@@ -180,10 +180,10 @@ public class ApplicationGUI extends JFrame {
 			if (event.getSource() == reg_PI.save){
 				Patient some = new Patient();
 				String[] info = new String[4];
-				some.ssn = reg_PI.textField.getText();
-				some.birthdate = reg_PI.textField_1.getText();
-				some.lastName = reg_PI.textField_2.getText();
-				some.firstName = reg_PI.textField_3.getText();
+				some.ssn = reg_PI.ssnTextField.getText();
+				some.birthdate = reg_PI.birthDateTextField.getText();
+				some.lastName = reg_PI.lastNameTextField.getText();
+				some.firstName = reg_PI.firstNameTextField.getText();
 				//sex
 				/*
 				if(reg_PI.check1.isSelected()){
