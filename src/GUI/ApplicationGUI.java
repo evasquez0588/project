@@ -62,6 +62,7 @@ public class ApplicationGUI extends JFrame {
 	Reg_CI reg_CI;
 	Reg_MH reg_MH;
 	Reg_LI reg_LI;
+	
 
 
 	/**
@@ -179,7 +180,7 @@ public class ApplicationGUI extends JFrame {
 			}
 			if (event.getSource() == reg_PI.save){
 				Patient some = new Patient();
-				String[] info = new String[4];
+				//String[] info = new String[4];
 				some.ssn = reg_PI.ssnTextField.getText();
 				some.birthdate = reg_PI.birthDateTextField.getText();
 				some.lastName = reg_PI.lastNameTextField.getText();
@@ -200,6 +201,16 @@ public class ApplicationGUI extends JFrame {
 					e.printStackTrace();
 				}
 			}
+			
+			if(event.getSource() == pat_HCU.updateButton)
+			{
+				Patient somePatient = new Patient();
+				
+			}
+				
+				
+				
+				
 			if (event.getSource() == reg_II.btnSave){
 				String[] info = new String[3];
 				//Insurance Name
