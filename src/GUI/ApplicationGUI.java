@@ -80,7 +80,7 @@ public class ApplicationGUI extends JFrame {
 		//test_app = new Controller(500,500);
 		//pat_SeAl = new PAT_SeAl();
 		pat_ScAp = new PAT_ScAp(500,500);
-		pat_HCU = new PAT_HCU();
+		pat_HCU = new PAT_HCU(b);
 
 		RegistrationBase = new TestPatient_Registration1(e, b);
 		reg_PI = new Reg_PI(b);

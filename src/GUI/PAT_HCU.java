@@ -12,11 +12,14 @@ import java.awt.event.ActionEvent;
 public class PAT_HCU extends JPanel {
 	private JTextField textField;
 	private JTextField textField_1;
+	public TextArea textAreaMedicalHistory;
+	public TextArea textAreaAllergies;
+	public JButton savebutton;
 
 	/**
 	 * Create the panel.
 	 */
-	public PAT_HCU() {
+	public PAT_HCU(ActionListener b) {
 		
 		setLayout(null);
 		setSize(680,653);
@@ -52,7 +55,7 @@ public class PAT_HCU extends JPanel {
 		add(btnSearch);
 		
 		JLabel lblPatientInfo = new JLabel("Patient Info:");
-		lblPatientInfo.setBounds(10, 150, 65, 14);
+		lblPatientInfo.setBounds(10, 150, 80, 14);
 		add(lblPatientInfo);
 		
 		JLabel lblName = new JLabel("Name: ???");
@@ -64,7 +67,7 @@ public class PAT_HCU extends JPanel {
 		add(lblAddress);
 		
 		JLabel lblMedicalHistory = new JLabel("Medical History:");
-		lblMedicalHistory.setBounds(10, 247, 161, 14);
+		lblMedicalHistory.setBounds(10, 247, 90, 14);
 		add(lblMedicalHistory);
 		
 		TextArea textArea = new TextArea();
@@ -72,7 +75,7 @@ public class PAT_HCU extends JPanel {
 		add(textArea);
 		
 		JLabel lblAllergies = new JLabel("Allergies:");
-		lblAllergies.setBounds(10, 339, 161, 14);
+		lblAllergies.setBounds(10, 339, 90, 14);
 		add(lblAllergies);
 		
 		TextArea textArea_1 = new TextArea();
@@ -84,23 +87,24 @@ public class PAT_HCU extends JPanel {
 		add(lblNewLabel);
 		
 		JLabel label = new JLabel("Medical History:");
-		label.setBounds(10, 481, 161, 14);
+		label.setBounds(10, 481, 90, 14);
 		add(label);
 		
 		JLabel label_1 = new JLabel("Allergies:");
-		label_1.setBounds(10, 563, 161, 14);
+		label_1.setBounds(10, 563, 90, 14);
 		add(label_1);
 		
-		TextArea textArea_2 = new TextArea();
-		textArea_2.setBounds(104, 482, 380, 75);
-		add(textArea_2);
+		textAreaMedicalHistory = new TextArea();
+		textAreaMedicalHistory.setBounds(104, 482, 380, 75);
+		add(textAreaMedicalHistory);
 		
-		TextArea textArea_3 = new TextArea();
-		textArea_3.setBounds(104, 563, 380, 75);
-		add(textArea_3);
+		textAreaAllergies = new TextArea();
+		textAreaAllergies.setBounds(104, 563, 380, 75);
+		add(textAreaAllergies);
 		
-		JButton btnNewButton = new JButton("Update");
-		btnNewButton.setBounds(545, 559, 89, 23);
-		add(btnNewButton);
+		savebutton = new JButton("Update");
+		savebutton.setBounds(545, 559, 89, 23);
+		add(savebutton);
+		savebutton.addActionListener(b);
 	}
 }
