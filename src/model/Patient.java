@@ -55,6 +55,7 @@ public class Patient
 	  summary.add(address);
 	  summary.add(healthCondition);
 	  summary.add(healthCondition);
+	  summary.add(allergies);
 	  return summary;
   }
   

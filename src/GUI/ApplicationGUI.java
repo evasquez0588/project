@@ -62,6 +62,7 @@ public class ApplicationGUI extends JFrame {
 	Reg_CI reg_CI;
 	Reg_MH reg_MH;
 	Reg_LI reg_LI;
+	
 
 
 	/**
@@ -80,7 +81,7 @@ public class ApplicationGUI extends JFrame {
 		//test_app = new Controller(500,500);
 		//pat_SeAl = new PAT_SeAl();
 		pat_ScAp = new PAT_ScAp(500,500);
-		pat_HCU = new PAT_HCU();
+		pat_HCU = new PAT_HCU(b);
 
 		RegistrationBase = new TestPatient_Registration1(e, b);
 		reg_PI = new Reg_PI(b);
@@ -184,6 +185,47 @@ public class ApplicationGUI extends JFrame {
 					e.printStackTrace();
 				}
 			}
+			if (event.getSource() == reg_PI.save){
+				if (tc.activePatient == null)
+					tc.activePatient = new Patient();
+				tc.activePatient.ssn = reg_PI.ssnTextField.getText();
+				tc.activePatient.birthdate = reg_PI.birthDateTextField.getText();
+				tc.activePatient.lastName = reg_PI.lastNameTextField.getText();
+				tc.activePatient.firstName = reg_PI.firstNameTextField.getText();
+				//sex
+				if(reg_PI.maleCheck.isSelected()){
+					tc.activePatient.sex="M";
+				}
+				else
+					tc.activePatient.sex="F";
+			}
+			
+			if(event.getSource() == pat_HCU.updateButton) //this is just for health condition and Allergies update
+			{
+				Patient somePatient = new Patient();
+				somePatient.firstName = pat_HCU.textFieldFName.getName();
+				somePatient.lastName = pat_HCU.textFieldLName.getName();
+				somePatient.allergies = pat_HCU.textAreaAllergies.getText();
+				somePatient.healthCondition = pat_HCU.textAreaMedicalHistory.getText();
+			/*  
+			 *          ***Important We will get the new update and Delete the old one****
+			 * 
+			 *  	
+				try {
+					ArrayList<ArrayList<String>> result = (new TableController()). (somePatient);
+			=======
+				try {
+					ArrayList<ArrayList<String>> result = tc.registerPatient(tc.activePatient);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+					tc.activePatient.sex="F";
+			
+			*/
+			}
+
+				
 			if (event.getSource() == reg_PI.save){
 				if (tc.activePatient == null)
 					tc.activePatient = new Patient();

@@ -10,13 +10,16 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class PAT_HCU extends JPanel {
-	private JTextField textField;
-	private JTextField textField_1;
+	public JTextField textFieldFName;
+	public JTextField textFieldLName;
+	public TextArea textAreaMedicalHistory;
+	public TextArea textAreaAllergies;
+	public JButton updateButton;
 
 	/**
 	 * Create the panel.
 	 */
-	public PAT_HCU() {
+	public PAT_HCU(ActionListener b) {
 		
 		setLayout(null);
 		setSize(680,653);
@@ -29,30 +32,32 @@ public class PAT_HCU extends JPanel {
 		lblSearchForA.setBounds(10, 39, 118, 14);
 		add(lblSearchForA);
 		
-		textField = new JTextField();
-		textField.setBounds(124, 56, 86, 20);
-		add(textField);
-		textField.setColumns(10);
-		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(124, 87, 86, 20);
-		add(textField_1);
+	
 		
 		JLabel lblFirstName = new JLabel("First name:");
 		lblFirstName.setBounds(49, 59, 65, 14);
 		add(lblFirstName);
 		
+		textFieldFName = new JTextField();
+		textFieldFName.setBounds(124, 56, 86, 20);
+		add(textFieldFName);
+		textFieldFName.setColumns(10);
+		
 		JLabel lblLastName = new JLabel("Last name:");
 		lblLastName.setBounds(49, 90, 65, 14);
 		add(lblLastName);
+		
+		textFieldLName = new JTextField();
+		textFieldLName.setColumns(10);
+		textFieldLName.setBounds(124, 87, 86, 20);
+		add(textFieldLName);
 		
 		JButton btnSearch = new JButton("Search");
 		btnSearch.setBounds(121, 118, 89, 23);
 		add(btnSearch);
 		
 		JLabel lblPatientInfo = new JLabel("Patient Info:");
-		lblPatientInfo.setBounds(10, 150, 65, 14);
+		lblPatientInfo.setBounds(10, 150, 80, 14);
 		add(lblPatientInfo);
 		
 		JLabel lblName = new JLabel("Name: ???");
@@ -64,7 +69,7 @@ public class PAT_HCU extends JPanel {
 		add(lblAddress);
 		
 		JLabel lblMedicalHistory = new JLabel("Medical History:");
-		lblMedicalHistory.setBounds(10, 247, 161, 14);
+		lblMedicalHistory.setBounds(10, 247, 90, 14);
 		add(lblMedicalHistory);
 		
 		TextArea textArea = new TextArea();
@@ -72,7 +77,7 @@ public class PAT_HCU extends JPanel {
 		add(textArea);
 		
 		JLabel lblAllergies = new JLabel("Allergies:");
-		lblAllergies.setBounds(10, 339, 161, 14);
+		lblAllergies.setBounds(10, 339, 90, 14);
 		add(lblAllergies);
 		
 		TextArea textArea_1 = new TextArea();
@@ -84,23 +89,24 @@ public class PAT_HCU extends JPanel {
 		add(lblNewLabel);
 		
 		JLabel label = new JLabel("Medical History:");
-		label.setBounds(10, 481, 161, 14);
+		label.setBounds(10, 481, 90, 14);
 		add(label);
 		
 		JLabel label_1 = new JLabel("Allergies:");
-		label_1.setBounds(10, 563, 161, 14);
+		label_1.setBounds(10, 563, 90, 14);
 		add(label_1);
 		
-		TextArea textArea_2 = new TextArea();
-		textArea_2.setBounds(104, 482, 380, 75);
-		add(textArea_2);
+		textAreaMedicalHistory = new TextArea();
+		textAreaMedicalHistory.setBounds(104, 482, 380, 75);
+		add(textAreaMedicalHistory);
 		
-		TextArea textArea_3 = new TextArea();
-		textArea_3.setBounds(104, 563, 380, 75);
-		add(textArea_3);
+		textAreaAllergies = new TextArea();
+		textAreaAllergies.setBounds(104, 563, 380, 75);
+		add(textAreaAllergies);
 		
-		JButton btnNewButton = new JButton("Update");
-		btnNewButton.setBounds(545, 559, 89, 23);
-		add(btnNewButton);
+		updateButton = new JButton("Update");
+		updateButton.setBounds(545, 559, 89, 23);
+		add(updateButton );
+		updateButton.addActionListener(b);
 	}
 }
