@@ -15,6 +15,9 @@ public class TableController implements DBQuery{
 	 * @return a table
 	 * @throws SQLException
 	 */
+	
+	public static Patient activePatient = null;
+	
 	public Connection connectDatabase() {
 		Connection connection = null;
 		try {
