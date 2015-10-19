@@ -208,7 +208,6 @@ public class ApplicationGUI extends JFrame {
 				somePatient.allergies = pat_HCU.textAreaAllergies.getText();
 				somePatient.healthCondition = pat_HCU.textAreaMedicalHistory.getText();
 			/*  
-			 * 
 			 *          ***Important We will get the new update and Delete the old one****
 			 * 
 			 *  	
