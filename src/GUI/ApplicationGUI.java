@@ -172,33 +172,31 @@ public class ApplicationGUI extends JFrame {
 	 * 
 	 */
 	//INSERT METHODS HERE
+	private TableController tc = new TableController();
 	public class Bridge implements ActionListener{
 		public void actionPerformed (ActionEvent event){
 			if (event.getSource() == RegistrationBase.b6){
 				//INSERT CODE HERE
-			}
-			if (event.getSource() == reg_PI.save){
-				Patient some = new Patient();
-				String[] info = new String[4];
-				some.ssn = reg_PI.ssnTextField.getText();
-				some.birthdate = reg_PI.birthDateTextField.getText();
-				some.lastName = reg_PI.lastNameTextField.getText();
-				some.firstName = reg_PI.firstNameTextField.getText();
-				//sex
-				/*
-				if(reg_PI.check1.isSelected()){
-					some.sex="M";
-				}
-				else
-					some.sex="F";
-					*/
-				some.sex = "M";
 				try {
-					ArrayList<ArrayList<String>> result = (new TableController()).registerPatient(some);
+					ArrayList<ArrayList<String>> result = tc.registerPatient(tc.activePatient);
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+			}
+			if (event.getSource() == reg_PI.save){
+				if (tc.activePatient == null)
+					tc.activePatient = new Patient();
+				tc.activePatient.ssn = reg_PI.ssnTextField.getText();
+				tc.activePatient.birthdate = reg_PI.birthDateTextField.getText();
+				tc.activePatient.lastName = reg_PI.lastNameTextField.getText();
+				tc.activePatient.firstName = reg_PI.firstNameTextField.getText();
+				//sex
+				if(reg_PI.maleCheck.isSelected()){
+					tc.activePatient.sex="M";
+				}
+				else
+					tc.activePatient.sex="F";
 			}
 			if (event.getSource() == reg_II.btnSave){
 				String[] info = new String[3];

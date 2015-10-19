@@ -10,7 +10,7 @@ import java.util.Random;
 import model.Patient;
 
 
-public final class TableController implements DBQuery{
+public class TableController implements DBQuery{
 	/**
 	 * @return a table
 	 * @throws SQLException
