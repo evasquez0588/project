@@ -10,8 +10,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class PAT_HCU extends JPanel {
-	private JTextField textField;
-	private JTextField textField_1;
+	public JTextField textFieldFName;
+	public JTextField textFieldLName;
 	public TextArea textAreaMedicalHistory;
 	public TextArea textAreaAllergies;
 	public JButton updateButton;
@@ -32,23 +32,25 @@ public class PAT_HCU extends JPanel {
 		lblSearchForA.setBounds(10, 39, 118, 14);
 		add(lblSearchForA);
 		
-		textField = new JTextField();
-		textField.setBounds(124, 56, 86, 20);
-		add(textField);
-		textField.setColumns(10);
-		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(124, 87, 86, 20);
-		add(textField_1);
+	
 		
 		JLabel lblFirstName = new JLabel("First name:");
 		lblFirstName.setBounds(49, 59, 65, 14);
 		add(lblFirstName);
 		
+		textFieldFName = new JTextField();
+		textFieldFName.setBounds(124, 56, 86, 20);
+		add(textFieldFName);
+		textFieldFName.setColumns(10);
+		
 		JLabel lblLastName = new JLabel("Last name:");
 		lblLastName.setBounds(49, 90, 65, 14);
 		add(lblLastName);
+		
+		textFieldLName = new JTextField();
+		textFieldLName.setColumns(10);
+		textFieldLName.setBounds(124, 87, 86, 20);
+		add(textFieldLName);
 		
 		JButton btnSearch = new JButton("Search");
 		btnSearch.setBounds(121, 118, 89, 23);

@@ -202,10 +202,26 @@ public class ApplicationGUI extends JFrame {
 				}
 			}
 			
-			if(event.getSource() == pat_HCU.updateButton)
+			if(event.getSource() == pat_HCU.updateButton) //this is just for health condition and Allergies update
 			{
 				Patient somePatient = new Patient();
-				
+				somePatient.firstName = pat_HCU.textFieldFName.getName();
+				somePatient.lastName = pat_HCU.textFieldLName.getName();
+				somePatient.allergies = pat_HCU.textAreaAllergies.getText();
+				somePatient.healthCondition = pat_HCU.textAreaMedicalHistory.getText();
+			/*  
+			 * 
+			 *          ***Important We will get the new update and Delete the old one****
+			 * 
+			 *  	
+				try {
+					ArrayList<ArrayList<String>> result = (new TableController()). (somePatient);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			
+			*/
 			}
 				
 				
