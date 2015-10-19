@@ -213,6 +213,9 @@ public class ApplicationGUI extends JFrame {
 			 *  	
 				try {
 					ArrayList<ArrayList<String>> result = (new TableController()). (somePatient);
+			=======
+				try {
+					ArrayList<ArrayList<String>> result = tc.registerPatient(tc.activePatient);
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -221,10 +224,22 @@ public class ApplicationGUI extends JFrame {
 			
 			*/
 			}
+
 				
-				
-				
-				
+			if (event.getSource() == reg_PI.save){
+				if (tc.activePatient == null)
+					tc.activePatient = new Patient();
+				tc.activePatient.ssn = reg_PI.ssnTextField.getText();
+				tc.activePatient.birthdate = reg_PI.birthDateTextField.getText();
+				tc.activePatient.lastName = reg_PI.lastNameTextField.getText();
+				tc.activePatient.firstName = reg_PI.firstNameTextField.getText();
+				//sex
+				if(reg_PI.maleCheck.isSelected()){
+					tc.activePatient.sex="M";
+				}
+				else
+					tc.activePatient.sex="F";
+			}
 			if (event.getSource() == reg_II.btnSave){
 				String[] info = new String[3];
 				//Insurance Name
